@@ -3,7 +3,7 @@ package JavaIo;
 import java.io.FileInputStream;
 
 import java.io.ByteArrayInputStream;
-
+//okokokokk
 //ByteArrayInputStream is used to read byte array as input stream
 
 public class BufferArrayInp
