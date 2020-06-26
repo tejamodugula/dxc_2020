@@ -10,7 +10,6 @@ public class DataOutStr
 	{
 		FileOutputStream mFout = new FileOutputStream("C:\\fileop\\testout.txt");
 		DataOutputStream mDouts = new DataOutputStream(mFout);
-	
 		mDouts.write(97);
 		mDouts.write(97);
 		mDouts.write(97);

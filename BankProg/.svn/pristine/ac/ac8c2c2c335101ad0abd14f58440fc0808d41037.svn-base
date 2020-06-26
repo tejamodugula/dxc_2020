@@ -1,22 +1,16 @@
 package Bank;
-
-
-import java.io.BufferedReader;
-
-public class ICICI implements RBI
+import  java.io.BufferedReader;
+public class HDFC implements RBI
 {
-	
-	public int ROI = 4;
-	public int MIN_FD_AMOUNT = 5000;
-	public int MIN_YEARS = 3;
-	public int MIN_BAL = 3000;
+	public int ROI = 5;
+	public int MIN_FD_AMOUNT = 6000;
+	public int MIN_YEARS = 4;
+	public int MIN_BAL = 5000;
 	public int BAL = MIN_BAL;
 	
 	@Override
-	public void openAccount(BufferedReader buff)
-	{
-		try 
-		{
+	public void openAccount(BufferedReader buff) {
+		try {
 			System.out.println("Enter your Name");
 			String name = buff.readLine();
 			System.out.println("Enter your Email");
@@ -33,8 +27,10 @@ public class ICICI implements RBI
 	}
 
 	@Override
-	public void deposit(BufferedReader buff) {
-		try {
+	public void deposit(BufferedReader buff)
+	{
+		try 
+		{
 			System.out.println("Enter the amount to be deposited");
 			String amount = buff.readLine();
 			BAL = BAL + Integer.parseInt(amount);
@@ -46,7 +42,8 @@ public class ICICI implements RBI
 	}
 
 	@Override
-	public void withdrawl(BufferedReader buff) {
+	public void withdrawl(BufferedReader buff) 
+	{
 		try {
 			System.out.println("Enter the amount to be Withdrawl");
 			String amount = buff.readLine();
@@ -62,7 +59,8 @@ public class ICICI implements RBI
 	}
 
 	@Override
-	public void openFD(BufferedReader buff) {
+	public void openFD(BufferedReader buff) 
+	{
 		try {
 			System.out.println("Enter your FD amount");
 			String fdamount = buff.readLine();
@@ -70,7 +68,7 @@ public class ICICI implements RBI
 			String years = buff.readLine();
 			if(Integer.parseInt(fdamount) > MIN_FD_AMOUNT && Integer.parseInt(years) > MIN_YEARS) {
 				int TotalFDAmount = Integer.parseInt(fdamount) + (ROI*Integer.parseInt(fdamount));
-				for(int i=2; i<=Integer.parseInt(years); i++)
+				for(int i=2; i<Integer.parseInt(years); i++)
 					TotalFDAmount = TotalFDAmount + (ROI*TotalFDAmount);
 				System.out.println("Your Total FD Amount after "+years+" years will be "+TotalFDAmount);
 			}
@@ -80,5 +78,4 @@ public class ICICI implements RBI
 			System.out.println("Exception is "+e);
 		}
 	}
-
 }

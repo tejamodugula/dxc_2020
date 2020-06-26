@@ -13,10 +13,8 @@ public class ICICI implements RBI
 	public int BAL = MIN_BAL;
 	
 	@Override
-	public void openAccount(BufferedReader buff)
-	{
-		try 
-		{
+	public void openAccount(BufferedReader buff) {
+		try {
 			System.out.println("Enter your Name");
 			String name = buff.readLine();
 			System.out.println("Enter your Email");
