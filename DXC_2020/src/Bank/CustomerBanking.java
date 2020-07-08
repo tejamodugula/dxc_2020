@@ -6,7 +6,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-class MyBankClass<T> { // T -> ICICI / HDFC / AXIS
+class MyBankClass<T> 
+{ // T -> ICICI / HDFC / AXIS
 	T obj;
 
 	void create(T obj) { // T-> ICICI / HDFC / AXIS
@@ -18,7 +19,8 @@ class MyBankClass<T> { // T -> ICICI / HDFC / AXIS
 	}
 }
 
-public class CustomerBanking {
+public class CustomerBanking 
+{
 
 	InputStreamReader isr = null;
 	BufferedReader buff = null;
@@ -31,7 +33,8 @@ public class CustomerBanking {
 
 	List<Customer> mCustomerList = new ArrayList<Customer>();
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception
+	{
 
 		CustomerBanking mObject = new CustomerBanking();
 
