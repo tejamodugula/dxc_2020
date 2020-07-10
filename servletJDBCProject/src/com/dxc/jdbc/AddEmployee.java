@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class AddEmployee
  */
 @WebServlet("/AddEmployee")
-public class AddEmployee extends HttpServlet {
+public class AddEmployee extends HttpServlet
+{
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String empName = request.getParameter("empname");
@@ -27,12 +28,14 @@ public class AddEmployee extends HttpServlet {
 		
 		try {
 			EmployeeDAO.saveEmployee(mEmployee);
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
 	
 		doGet(request, response);
 	}

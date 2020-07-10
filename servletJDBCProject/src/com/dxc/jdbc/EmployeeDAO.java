@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeDAO {
-
+public class EmployeeDAO 
+{
 	// Singleton Design Pattern Implementation for Connection Object
 	public static Connection getConnection() throws Exception {
 		Connection con = null;
